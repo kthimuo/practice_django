@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="utf-8" />
+    <title>メーカー一覧</title>
+</head>
+ 
+<body>
+    <h1>メーカー一覧</h1>
+    <p>{{ message }}</p>
+    <table border="1">
+        <tr>
+            <th>name</th>
+        </tr>
+        {% for member in data %}
+        <tr>
+            <td>{{ member.name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+ 
+</html>

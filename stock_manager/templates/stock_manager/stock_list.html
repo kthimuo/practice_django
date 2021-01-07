@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="utf-8" />
+    <title>在庫一覧</title>
+</head>
+ 
+<body>
+    <p>{{ message }}</p>
+    <table border="1">
+        <tr>
+            <th>メーカー</th>
+            <th>機種</th>
+            <th>データ容量(GB)</th>
+            <th>OSバージョン</th>
+            <th>色</th>
+            <th>販売価格(円)</th>
+        </tr>
+        {% for member in data %}
+        <tr>
+            <td>{{ member.smartphone.product.maker }}</td>
+            <td>{{ member.smartphone.product.name }}</td>
+            <td>{{ member.smartphone.storage }}</td>
+            <td>{{ member.version }}</td>
+            <td>{{ member.smartphone.color }}</td>
+            <td>{{ member.price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+ 
+</html>

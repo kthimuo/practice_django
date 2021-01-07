@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="utf-8" />
+    <title>product一覧</title>
+</head>
+ 
+<body>
+    <p>{{ message }}</p>
+    <table border="1">
+        <tr>
+            <th>メーカー</th>
+            <th>機種名</th>
+            <th>発売日</th>
+        </tr>
+        {% for member in data %}
+        <tr>
+            <td>{{ member.maker }}</td>
+            <td>{{ member.name }}</td>
+            <td>{{ member.release_date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+ 
+</html>

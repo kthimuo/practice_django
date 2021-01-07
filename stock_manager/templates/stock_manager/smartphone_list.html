@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="utf-8" />
+    <title>smartphone一覧</title>
+</head>
+ 
+<body>
+    <p>{{ message }}</p>
+    <table border="1">
+        <tr>
+            <th>メーカー</th>
+            <th>機種</th>
+            <th>データ容量(GB)</th>
+            <th>色</th>
+        </tr>
+        {% for member in data %}
+        <tr>
+            <td>{{ member.product.maker }}</td>
+            <td>{{ member.product }}</td>
+            <td>{{ member.storage }}</td>
+            <td>{{ member.color }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+ 
+</html>
